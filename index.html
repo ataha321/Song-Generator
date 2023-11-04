@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poem Generator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="poem.css" />
+    <script type="text/javascript" src="./lib/jquery-3.6.3.js"></script>
+    <script type="text/javascript" src="./js/poem.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>jQuery Poem Generator</h1>
+    </header>
+
+    <div id="wrapper">
+      <div id="dashboard">
+        <div class="writersblock">
+             <label for="type">Poem's type </label>
+                <select name="poem_type" id="id_type">
+                    <option value="Upbeat">Upbeat Poem</option>
+                    <option value="Melancholy">Melancholy Poem</option>
+                </select> 
+              <br><br>
+              <label for="id_poemTitle"> Title </label
+                ><input
+                  type="text"
+                  id="id_poemTitle"
+                  name="name_poemTitle"
+                  value=""
+                  maxlength="50"
+                  size="50"
+                />
+              <br><br>
+
+            <button id="id_setType" onclick="typePoem()">Set title</button>
+        </div>
+
+        <div class="writersblock"> 
+          <label for="poem_Num"> Poem's Line</label
+          ><input
+            type="text"
+            id="id_poemNumToCreate"
+            name="name_poemToCreate"
+            value="1"
+            maxlength="1"
+            size="1"
+          />
+          <button id="id_createpeom" onclick="createPoem()">Create</button>
+          <br><br>
+          <label for="freeform">Enter the text for your poem:</label> or   
+          <button id="id_randomfill" onclick="randomfillPoem()">Random fill</button>
+            <br><br>
+            <textarea
+              id="id_freeform"
+              name="name_freeform"
+              rows="4"
+              cols="50"
+            >Enter text here..
+            </textarea>
+          </div>
+
+          <div class="writersblock">
+            <button id="changeAll" onclick="addSmiley(true)">Add Smiley Before</button>
+            <input
+            type="text"
+            id="id_smileybefore"
+            name="name_smileybefore"
+            value="1"
+            maxlength="1"
+            size="1"
+          /><br><br>
+              <button id="changeAll" onclick="addSmiley(false)">Add Smiley After</button>
+              <input
+            type="text"
+            id="id_smileyafter"
+            name="name_smileyafter"
+            value="1"
+            maxlength="1"
+            size="1"
+          />
+          </div>
+
+          <div class="writersblock">
+          
+             <label for="id_signoffs">Quote:</label>
+                <select name="name_signoffs" id="id_signoffs">
+                  <option value="We love the things we love for what they are.">"We love the things we love for what they are."</option>
+                  <option value="With the new day comes new strength and new thoughts.">"With the new day comes new strength and new thoughts."</option>
+                </select> 
+            <br><br>
+          <label for="id_senderName"> Author's Name </label
+          ><input
+            type="text"
+            id="id_authorName"
+            name="name_authorName"
+            value=""
+            maxlength="25"
+            size="25"
+          />
+          <button id="id_setBye" onclick="signOff()">Sign Off Poem</button>
+          </div>
+        </div>
+        
+      
+      <div id="poem">
+        <h2 id="title"></h2>
+      </div>
+      
+      </div>
+    </div>
+  </body>
+</html>
